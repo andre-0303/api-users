@@ -1,6 +1,8 @@
 import express, { response } from 'express'
 import mongoose from 'mongoose';
 
+import User from './models/User.js';
+
 const app = express();
 
 app.use(express.json());
