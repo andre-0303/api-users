@@ -1,4 +1,5 @@
 import express, { response } from 'express'
+import mongoose from 'mongoose';
 
 const app = express();
 
@@ -27,3 +28,7 @@ app.post('/users', (req, res) => {
 app.listen(PORT, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${PORT}`)
 })
+
+mongoose.connect('mongodb+srv://andre:23042024Ma@cluster0.vuym1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+.then(() => console.log('✔️  Banco de dados conectado!'))
+.catch(() => console.log('Falha ao conectar com o banco de dos ❌'))
